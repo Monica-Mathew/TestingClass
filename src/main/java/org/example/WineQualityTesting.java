@@ -16,11 +16,12 @@ import java.util.Arrays;
 public class WineQualityTesting {
     public static void main(String[] args){
         if (args.length < 1) {
-            System.err.println("Usage: WineQualityTesting <testingPath>");
+            System.err.println("Usage: Need to pass testData");
             System.exit(1);
         }
         String testingPath = args[0];
-        String modelPath = "../model";
+//        String modelPath = "../model"; //local testing
+        String modelPath= "hdfs:///user/hadoop/";
 
         SparkSession sparkSession = SparkSession.builder().
                 appName("WineQualityTesting").master("local[*]").getOrCreate();
