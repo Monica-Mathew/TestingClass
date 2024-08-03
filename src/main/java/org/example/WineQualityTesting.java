@@ -46,7 +46,7 @@ public class WineQualityTesting {
 
         // Compute the F1 score of DTree
         double f1ScoreDT = evaluator.evaluate(dtModelPredictions);
-        System.out.println("Validation F1 Score of Decision Tree: " + f1ScoreDT);
+        System.out.println("F1 Score of Decision Tree: " + f1ScoreDT);
 
         sparkSession.stop();
 
