@@ -20,6 +20,7 @@ public class WineQualityTesting {
             System.exit(1);
         }
         String testingPath = args[0];
+        String modelPath = "../model";
 
         SparkSession sparkSession = SparkSession.builder().
                 appName("WineQualityTesting").master("local[*]").getOrCreate();
@@ -29,11 +30,7 @@ public class WineQualityTesting {
         testData = preProcessData(testData);
 
 
-        DecisionTreeClassifier dTree = new DecisionTreeClassifier().
-                setFeaturesCol("trainingFeatures").setLabelCol("quality") ;
-
-        DecisionTreeClassificationModel dtModel = dTree.fit(testData);
-
+        DecisionTreeClassificationModel dtModel = DecisionTreeClassificationModel.load(modelPath);
 
         Dataset<Row> dtModelPredictions = dtModel.transform(testData);
         dtModelPredictions.show();
