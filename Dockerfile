@@ -13,7 +13,7 @@ ENV PATH=/spark/bin:$PATH
 
 # Copy the JAR file into the container at /app
 COPY target/original-TestingClass-1.0-SNAPSHOT.jar /app/original-TestingClass-1.0-SNAPSHOT.jar
-COPY model /model
+# COPY model /model # local testing
 
 # The EXPOSE instruction marks that our final image has a service listening on port 8000.
 EXPOSE 8080

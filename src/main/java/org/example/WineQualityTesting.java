@@ -21,7 +21,8 @@ public class WineQualityTesting {
         }
         String testingPath = args[0];
 //        String modelPath = "../model"; //local testing
-        String modelPath= "hdfs:///user/hadoop/";
+//        String modelPath= "hdfs:///user/hadoop/";
+        String modelPath = "hdfs://ip-172-31-9-205.ec2.internal:8020/user/hadoop";
 
         SparkSession sparkSession = SparkSession.builder().
                 appName("WineQualityTesting").master("local[*]").getOrCreate();
