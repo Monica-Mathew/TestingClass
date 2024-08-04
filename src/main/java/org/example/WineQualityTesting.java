@@ -1,16 +1,11 @@
 package org.example;
 import org.apache.spark.ml.classification.*;
 import org.apache.spark.ml.evaluation.MulticlassClassificationEvaluator;
-import org.apache.spark.ml.feature.StandardScaler;
 import org.apache.spark.ml.feature.VectorAssembler;
-import org.apache.spark.ml.feature.StandardScalerModel;
-import org.apache.spark.ml.linalg.Matrix;
 import org.apache.spark.sql.SparkSession;
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
-import org.apache.spark.sql.functions;
 
-import java.io.IOException;
 import java.util.Arrays;
 
 public class WineQualityTesting {
