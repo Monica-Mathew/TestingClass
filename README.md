@@ -10,7 +10,7 @@ Wine Quality Prediction Module
 mvn clean package
 ```
 
-#### Running the project
+#### Running the project locally
 ```
 spark-submit --class org.example.WineQualityTesting --master 'local[*]' target/TestingClass-1.0-SNAPSHOT.jar ValidationDataset.csv
 ```
